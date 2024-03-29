@@ -20,9 +20,20 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 Para obter um programa funcional, foi cumprida a missão de continuar o código fornecido incompleto, baseando-se nos requisitos descritos acima. Com o objetivo de aplicar os conhecimentos adquiridos no `Bootcamp Coding The Future Avanade - .NET Developer`, o código foi reformulado e desenvolvido com o objetivo de fornecer um Sistema de Hospedagem em Hotel utizando .NET.
 
 ## 📄 Funcionalidades
+- Cadastrar hóspedes
+- Cadastrar suíte
+- Obter quantidade de hóspedes
+- Calcular valor da hospedagem
 
 ## 📖 Especificações Técnicas
-A solução é composta por 3 (três) classes:
+A solução é composta por 4 (quatro) classes:
+- *Pessoa.cs:* é uma representação de uma pessoa em um sistema de gerenciamento de hospedagem. Ela oferece três construtores distintos para inicializar objetos Pessoa, permitindo a definição do nome e/ou sobrenome da pessoa de maneiras variadas. A classe possui propriedades públicas para armazenar o nome e sobrenome da pessoa, e uma propriedade de leitura NomeCompleto que retorna o nome completo da pessoa em letras maiúsculas, derivado da concatenação do nome e sobrenome.
+
+- *Suite.cs:* é responsável por representar uma suíte em um sistema de gerenciamento de hospedagem. A classe possui dois construtores: um construtor padrão que não recebe argumentos e não executa nenhuma ação, e um construtor que recebe três parâmetros: tipoSuite para definir o tipo da suíte, capacidade para definir a capacidade máxima de pessoas na suíte e valorDiaria para definir o valor da diária da suíte.
+
+- *Reserva.cs:*  é responsável por representar uma reserva de hospedagem em um sistema de gerenciamento. Seus atributos incluem uma lista de hóspedes (Hospedes), uma suíte reservada (Suite) e o número de dias da reserva (DiasReservados). Oferece funcionalidades como cadastrar hóspedes e associá-los à reserva, bem como definir a suíte reservada e calcular o valor total da reserva com base nos dias reservados e no valor da diária da suíte. Além disso, realiza verificações para garantir que o número de hóspedes não exceda a capacidade da suíte e aplica um desconto se a reserva for para 10 dias ou mais. Essa classe encapsula a lógica essencial para o gerenciamento de reservas de hospedagem em um sistema.
+
+- *Program.cs:* é a classe principal do programa. Nela são criadas instâncias de dois objetos Pessoa, representando os hóspedes. Esses objetos são então adicionados a uma lista de hóspedes. Em seguida, é criada uma instância da classe Suite, definindo suas características. Uma instância da classe Reserva é então criada, especificando a quantidade de dias a ser reservada. A suíte e os hóspedes são associados a essa reserva usando métodos específicos da classe Reserva. Por fim, são exibidos no console a quantidade de hóspedes associados à reserva e o valor total da reserva, calculado com base no número de dias reservados e no valor da diária da suíte.
 
 ## 👩🏻‍💻 Versões do Projeto
 Versão 1.0: versão original desenvolvida pelo professor Leonardo Buta para o Desafio C# e .NET do `Bootcamp Coding The Future Avanade - .NET Developer`.
